@@ -3,13 +3,15 @@
 {% block content %}
   <h1>Manufacturer List</h1>
   {% if manufacturer_list %}
-  	<ul class="list-group">
+  	<table class="table">
       {% for manufacturer in manufacturer_list %}
-        <li class="list-group-item">
-          Brand: {{ manufacturer.name }},
-          Country: {{ manufacturer.country }}
-        </li>
+        <tr>
+          <th scope="col">
+            Brand: {{ manufacturer.name }},
+            Country: {{ manufacturer.country }}
+          </th>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   {% endif %}
 {% endblock %}
